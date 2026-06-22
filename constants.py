@@ -52,7 +52,7 @@ SPEEDOMETER_FACTOR = 2.2                # Virtual MPH = game_speed * factor
 
 # ── Energy / Shield ──────────────────────────────────────────────────────────
 MAX_ENERGY          = 100.0
-ENERGY_DRAIN_RATE   = 3.5              # Per second while playing
+ENERGY_DRAIN_RATE   = 3.0              # Per second while playing
 ENERGY_ORB_VALUE    = 22.0
 ENERGY_HIT_PENALTY  = 30.0
 

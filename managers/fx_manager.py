@@ -14,7 +14,7 @@ from ursina import (
     destroy, curve, DirectionalLight, AmbientLight, PointLight
 )
 from constants import (
-    COL_CYAN, COL_LIME, COL_ROAD_GREY, COL_MAGENTA, COL_YELLOW,
+    COL_CYAN, COL_WHITE, COL_LIME, COL_ROAD_GREY, COL_MAGENTA, COL_YELLOW,
     COL_VIOLET, COL_ORANGE,
     ROAD_LENGTH, SPAWN_Z, DESPAWN_Z,
 )
@@ -51,6 +51,7 @@ class FXManager:
             scale=Vec3(14, 0.1, ROAD_LENGTH),
             position=Vec3(0, 0, ROAD_LENGTH / 2 - 15),
         )
+
         # Glowing side rails
         for sx, col_ in [(-7, COL_CYAN), (7, COL_CYAN)]:
             Entity(
@@ -59,6 +60,7 @@ class FXManager:
                 scale=Vec3(0.25, 1.0, ROAD_LENGTH),
                 position=Vec3(sx, 0.45, ROAD_LENGTH / 2 - 15),
             )
+            
         # Dotted centre line (static, just cosmetic)
         for z in range(-10, ROAD_LENGTH, 12):
             Entity(
@@ -88,7 +90,7 @@ class FXManager:
             (12, 0, 60),   (18, 0, 80),   (14, 0, 100),
             (20, 0, 130),  (11, 0, 155),  (17, 0, 175),
         ]
-        tower_colors = [COL_MAGENTA, COL_CYAN, COL_VIOLET, COL_ORANGE]
+        tower_colors = [COL_MAGENTA, COL_WHITE, COL_VIOLET, COL_ORANGE]
         for (tx, ty, tz) in tower_configs:
             h = random.uniform(6, 18)
             col = random.choice(tower_colors)

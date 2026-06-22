@@ -63,8 +63,57 @@ SHIP_BLUEPRINTS = {
         'collider_pad': 0.75,
         'unlock':       1000,
     },
+    # ── NEW SHIPS ──────────────────────────────────────────────────
+
+    'phantom': {
+        'label':        'THE PHANTOM',
+        'description':  'Ghost runner. Ultra-thin body, swept delta wings.',
+        'body_color':   color.Color(0.55, 0.0, 1.0, 1),   # deep violet
+        'wing_color':   color.Color(0.85, 0.0, 1.0, 1),   # electric purple
+        'body_scale':   Vec3(0.7, 0.18, 3.2),              # long, razor-thin
+        'wing_l_pos':   Vec3(-1.8, 0, 0.3),                # swept far back
+        'wing_r_pos':   Vec3(1.8,  0, 0.3),
+        'wing_scale':   Vec3(1.6, 0.10, 0.65),             # wide, paper-flat
+        'nose_scale':   Vec3(0.18, 0.15, 1.8),             # needle nose
+        'nose_color':   color.Color(0.9, 0.5, 1.0, 1),    # soft lavender tip
+        'dual_shot':    False,
+        'collider_pad': 0.6,                               # tiny hitbox
+        'unlock':       1500,
+    },
+
+    'titan': {
+        'label':        'THE TITAN',
+        'description':  'Siege class. Massive hull, triple-wide spread fire.',
+        'body_color':   color.Color(1.0, 0.4, 0.0, 1),    # molten orange
+        'wing_color':   color.Color(1.0, 0.15, 0.0, 1),   # deep lava red
+        'body_scale':   Vec3(2.6, 0.75, 1.8),              # wide and boxy
+        'wing_l_pos':   Vec3(-2.0, 0, -0.05),
+        'wing_r_pos':   Vec3(2.0,  0, -0.05),
+        'wing_scale':   Vec3(1.1, 0.38, 0.55),             # thick armoured wings
+        'nose_scale':   Vec3(0.75, 0.5, 0.45),             # blunt war-nose
+        'nose_color':   color.Color(1.0, 0.85, 0.0, 1),   # molten gold tip
+        'dual_shot':    True,
+        'collider_pad': 1.7,                               # big target, big damage
+        'unlock':       2000,
+    },
+
+    'viper': {
+        'label':        'THE VIPER',
+        'description':  'Agile striker. Forked hull, venom-green blades.',
+        'body_color':   color.Color(0.0, 1.0, 0.35, 1),   # toxic green
+        'wing_color':   color.Color(0.0, 0.8, 0.2, 1),    # jungle neon
+        'body_scale':   Vec3(1.0, 0.28, 2.6),
+        'wing_l_pos':   Vec3(-1.1, 0, 0.05),
+        'wing_r_pos':   Vec3(1.1,  0, 0.05),
+        'wing_scale':   Vec3(0.85, 0.15, 0.9),             # blade-like swept wings
+        'nose_scale':   Vec3(0.28, 0.22, 1.2),             # forked fang nose
+        'nose_color':   color.Color(0.6, 1.0, 0.2, 1),    # acid yellow-green
+        'dual_shot':    False,
+        'collider_pad': 0.85,
+        'unlock':       2500,
+    },
 }
-SHIP_ORDER = ['interceptor', 'dreadnought', 'wraith']
+SHIP_ORDER = ['interceptor', 'dreadnought', 'wraith', 'phantom', 'titan', 'viper']
 
 
 class PlayerShip:

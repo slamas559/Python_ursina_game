@@ -71,7 +71,7 @@ class UIManager:
         bg = Entity(
             parent=camera.ui,
             model='quad',
-            color=color.Color(0.0, 0.0, 0.06, 0.92),
+            color=color.Color(0.0, 0.0, 0.06, 0.32),
             scale=(2, 1),
             z=1,
         )
@@ -246,7 +246,7 @@ class UIManager:
         score_txt = Text(
             parent=score_bg,
             text='SCORE: 0',
-            scale=1.55,
+            scale=(5.55, 3),
             origin=(0, 0),
             color=COL_WHITE,
             font=_FONT_MONO,
@@ -267,7 +267,7 @@ class UIManager:
         speed_txt = Text(
             parent=speed_bg,
             text='0 MPH',
-            scale=1.55,
+            scale=(5.55, 3),
             origin=(0, 0),
             color=COL_CYAN,
             font=_FONT_MONO,
@@ -303,7 +303,7 @@ class UIManager:
             color=COL_LIME,
             scale=(0.48, 0.028),
             position=(0, -0.43),
-            origin=(-0.5, 0),
+            origin=(0, 0),
         )
         self._hud['energy_fill'] = en_fill
         self._track(en_fill)
@@ -361,7 +361,7 @@ class UIManager:
 
         resume_btn = Button(
             parent=camera.ui,
-            text='▶  RESUME',
+            text='RESUME',
             scale=(0.22, 0.09),
             position=(0, -0.05),
             color=COL_MAGENTA,

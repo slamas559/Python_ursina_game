@@ -103,6 +103,7 @@ class ObstacleManager:
             scale=Vec3(1.02, 0.08, 1.05),
             position=Vec3(0, 0.52, 0),
         )
+        # body.texture_scale = (width, height)
 
         patrol_dir = random.choice([-1, 1])
         self.obstacles.append({'e': body, 'type': obs_type, 'dir': patrol_dir})
